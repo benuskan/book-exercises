@@ -2,41 +2,49 @@
 
 # Create a *list* of 10 random numbers. Use the `runif()` function to make a 
 # vector of random numbers, then use `as.list()` to convert that to a list
-
+random_numbers <- as.list(runif(10, 1, 100))
+print(random_numbers)
 
 # Use `lapply()` to apply the `round()` function to each number, rounding it to 
 # the nearest 0.1 (one decimal place)
-
+random_numbers <- lapply(random_numbers, round, 1)
+print(random_numbers)
 
 # Create a variable 'sentence' that contains a sentence of text (something 
 # longish). Make the sentence lowercase; you can use a function to help.
-
+sentence <- tolower("I like to watch tv shows and anime")
 
 # Use the `strsplit()` function to split the sentence into a vector of letters.
 # Hint: split on `""` to split every character
 # Note: this will return a _list_ with 1 element (which is the vector of letters)
-
+letters_list <- strsplit(sentence, "")
 
 # Extract the vector of letters from the resulting list
+letters <- letters_list[[1]] #had to use double brackets...
 
 
 # Use the `unique()` function to get a vector of unique letters
-
+letters_unique <- unique(letters)
 
 # Define a function `count_occurrences` that takes in two parameters: a letter 
 # and a vector of letters. The function should return how many times that letter
 # occurs in the provided vector.
 # Hint: use a filter operation!
-
+count_occurrences <- function(letter, list_of_letters) {
+  length(list_of_letters[list_of_letters == letter])
+}
 
 # Call your `count_occurrences()` function to see how many times the letter 'e'
 # is in your sentence.
-
+print(letters)
+count_occurrences("e", letters)
 
 # Use `sapply()` to apply your `count_occurrences()` function to each unique 
 # letter in the vector to determine their frequencies.
 # Convert the result into a list (using `as.list()`).
+count_letters <- as.list(sapply(letters_unique, count_occurrences, letters))
 
 
 # Print the resulting list of frequencies
+print(count_letters)
 
