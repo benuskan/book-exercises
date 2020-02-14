@@ -2,6 +2,9 @@
 
 # Install and load the `ggplot2` package
 # You will also want to load `dplyr`
+install.packages("ggplot2")
+library("ggplot2")
+library("dplyr")
 
 
 # For this exercise you'll be working with the `diamonds` data set included in 
@@ -9,6 +12,9 @@
 # Use `?diamonds` to get more information about this data set (including the 
 # column descriptions. Also check the _column names_ and the _number of rows_ 
 # in the data set
+?diamonds
+colnames(diamonds)
+nrow(diamonds)
 
 
 # This data set has A LOT of rows. To make things a bit more readable, 
