@@ -12,6 +12,8 @@ library("ggplot2")
 
 # Draw a column (bar) chart of diamonds cuts by price, with each bar filled by 
 # clarity. You should see a _stacked_ bar chart.
+# ggplot(data = diamonds) +
+  # geom_col(mapping = aes(x = cut, y = price, fill = clarity)) no
 
 
 # Draw the same chart again, but with each element positioned to "fill" the y axis
