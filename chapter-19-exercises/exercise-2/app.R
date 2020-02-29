@@ -1,7 +1,7 @@
 # Exercise 2: a basic Shiny app
 
 # Load the `shiny` package
-
+library(shiny)
 
 # Define a new `ui` variable. This variable should be assigned a `fluidPage()` layout
 # The `fluidPage()` layout should be passed the following:
