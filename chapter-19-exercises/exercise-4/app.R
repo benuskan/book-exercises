@@ -4,6 +4,7 @@
 library("shiny")
 
 # Use source() to execute the `app_ui.R` and `app_server.R` files. These will
+source("app_ui.R")
 # define the UI value and server function respectively.
 
 # You will need to fill in the `app_ui.R` file to create the layout.
